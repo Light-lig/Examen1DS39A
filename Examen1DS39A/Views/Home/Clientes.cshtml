@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+    Examen1DS39A.util.Constantes constantes = new Examen1DS39A.util.Constantes();
 }
 
 
@@ -57,7 +58,7 @@
                             <td>@item.nit</td>
                             <td>
                                 @Html.ActionLink("Modificar", "EditCliente", "Home", new { id = item.cod_cliente }, htmlAttributes: new { @class = "btn btn-warning text-white" })
-                                @if (String.Compare(Session["nivel"].ToString(), "administrador", comparisonType: StringComparison.OrdinalIgnoreCase) == 0)
+                                @if (String.Compare(Session["nivel"].ToString(), constantes.administrador, comparisonType: StringComparison.OrdinalIgnoreCase) == 0)
                                 {
 
                                     @Html.ActionLink("Eliminar", "DeleteCliente", "Home", new { id = item.cod_cliente }, htmlAttributes: new { @class = "btn btn-danger text-white", onclick = String.Format("return confirm('Desea eliminar al cliente con id: {0}')", item.cod_cliente) });

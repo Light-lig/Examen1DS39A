@@ -12,8 +12,8 @@ namespace Examen1DS39A.util
 
         }
         public string CONEXIONSTRING = Properties.Settings.Default.conexion;
-        public const string cliente = "cliente";
-        public const string administrador = "administrador";
+        public  string cliente = "cliente";
+        public  string administrador = "administrador";
 
         public string mostrarMensaje(string mensaje, string tipoAlerta)
         {
