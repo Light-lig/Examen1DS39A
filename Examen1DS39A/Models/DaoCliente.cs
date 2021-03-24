@@ -78,10 +78,10 @@ namespace Examen1DS39A.Models
                     {
                         cnn.Open();
                         comando.Parameters.AddWithValue("@nombres", cli.nombres);
-                        comando.Parameters.AddWithValue("@apellidos", cli.nombres);
-                        comando.Parameters.AddWithValue("@dui", cli.nombres);
-                        comando.Parameters.AddWithValue("@direccion", cli.nombres);
-                        comando.Parameters.AddWithValue("@nit", cli.nombres);
+                        comando.Parameters.AddWithValue("@apellidos", cli.apellidos);
+                        comando.Parameters.AddWithValue("@dui", cli.dui);
+                        comando.Parameters.AddWithValue("@direccion", cli.direccion);
+                        comando.Parameters.AddWithValue("@nit", cli.nit);
                         int r = comando.ExecuteNonQuery();
                         if(r == 1)
                         {
