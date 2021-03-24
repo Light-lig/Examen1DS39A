@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "AddCliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Examen1DS39A.Models.Cliente
+<h2>AddCliente</h2>
+@Html.ActionLink("Volver", "Clientes", "Home", htmlAttributes: new { @class = "btn btn-info" })
+<div class="row">
+
+    <div class="col-sm-12 col-md-4 col-sm-4">
+    </div>
+    <div class="col-sm-12 col-md-4 col-sm-4">
+
+        @using (Html.BeginForm("AddCliente", "Home", FormMethod.Post))
+        {
+
+            @Html.ValidationSummary(false, "", htmlAttributes: new { @class = "text-danger" })
+            <div class="form-row">
+                <div class="form-group col-sm-6">
+
+                    @Html.TextBoxFor(c => c.nombres, htmlAttributes: new { @class = "form-control", @placeholder = "Nombres" })
+
+                </div>
+                <div class="form-group col-sm-6">
+                    @Html.TextBoxFor(c => c.apellidos, htmlAttributes: new { @class = "form-control", @placeholder = "Apellidos" })
+
+                </div>
+                <div class="form-group col-sm-6">
+                    @Html.TextBoxFor(c => c.dui, htmlAttributes: new { @class = "form-control", @placeholder = "00000000-0" })
+
+                </div>
+                <div class="form-group col-sm-6">
+                    @Html.TextBoxFor(c => c.nit, htmlAttributes: new { @class = "form-control", @placeholder = "0000-000000-000-0" })
+
+                </div>
+                <div class="form-group col-sm-12">
+                    @Html.TextAreaFor(c => c.direccion, htmlAttributes: new { @class = "form-control", @placeholder = "direccion" })
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        }
+
+    </div>
+    <div class="col-sm-12 col-md-4 col-sm-4">
+    </div>
+</div>
